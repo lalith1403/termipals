@@ -1,11 +1,11 @@
 # 🐮 Termipals
 
-Add some joy to your terminal with friendly ASCII art animals! Termipals brings life to your command line by letting you summon cute animal companions using simple commands.
+Add joy to your terminal with ASCII art animals! Termipals brings life to your command line by summoning cute animal companions using simple commands, powered by a tiny LLM.
 
 ```bash
 $ termipals moo
 
------------- < hello friend! > ------------
+------------ < mooo! having a great day! > ------------
                                    \
                                     \
                                      \    ^__^
@@ -15,53 +15,46 @@ $ termipals moo
                                              ||     ||
 ```
 
-## 🚀 Features
+## ✨ Features
 
-- **Easy to use**: Just type `termipals <animal>` to summon your friends
-- **File injection**: Use `termipals <animal> file.md` to add ASCII art to your files
-- **Lightweight**: Uses a tiny local LLM for generating new animals
-- **Extensible**: Easy to add new animals and customize existing ones
-- **Fast**: Written in Rust for blazing-fast performance
+- **Tiny Footprint**: Uses a super-lightweight LLM (<50MB) for generating animals
+- **Instant Setup**: Single pip install, LLM downloads only when needed
+- **File Magic**: Inject animals into your markdown files
+- **Smart Generation**: Creates contextual and fun ASCII art animals
+- **Offline Support**: Works without internet once LLM is downloaded
 
-## 🛠 Installation
-
-```bash
-cargo install termipals
-```
-
-## 🎮 Usage
+## 🚀 Quick Start
 
 ```bash
-# Show a random animal
-termipals
+# Install
+pip install termipals
 
-# Show specific animals
-termipals moo    # Show a cow
-termipals meow   # Show a cat
-termipals woof   # Show a dog
+# Basic usage
+termipals moo        # Show a cow
+termipals meow       # Show a cat
+termipals random     # Random animal
 
 # Add to files
 termipals moo README.md  # Add cow to start of README.md
 
 # Generate new animals
-termipals create "hamster"  # Generate ASCII art for a hamster
+termipals create hamster  # Generate ASCII art hamster
 ```
 
 ## 🏗 Architecture
 
-Termipals is built with performance and extensibility in mind:
+- **Core**: Pure Python for maximum compatibility
+- **LLM**: TinyLlama/phi-2 quantized to <50MB
+- **Storage**: Simple file-based for easy customization
+- **CLI**: Click for clean command-line interface
 
-- **Core**: Written in Rust for speed and reliability
-- **LLM**: Uses a small local model for generating new animals
-- **Storage**: Animals are stored as simple text files for easy customization
-- **CLI**: Simple and intuitive command-line interface
+## 🔧 Technical Details
 
-Check out [ARCHITECTURE.md](./docs/ARCHITECTURE.md) for more details.
+- Quantized LLM for tiny size (<50MB)
+- ONNX runtime for fast inference
+- Local caching of models and generated art
+- Smart prompt engineering for ASCII generation
 
 ## 🤝 Contributing
 
-Contributions are welcome! See [CONTRIBUTING.md](./docs/CONTRIBUTING.md) for guidelines.
-
-## 📜 License
-
-MIT
+Contributions welcome! See [CONTRIBUTING.md](docs/CONTRIBUTING.md)
